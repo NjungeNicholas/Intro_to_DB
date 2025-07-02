@@ -14,9 +14,10 @@ try:
         password = os.getenv('DB_PASSWORD'),
     )
 
+    # Check if the connection was successful
     if connection.is_connected():
         cursor = connection.cursor()
-        # Create a new database
+        # Create a new database named 'alx_book_store'
         cursor.execute("CREATE DATABASE IF NOT EXISTS alx_book_store")
         print("Database 'alx_book_store' created successfully.")
 
